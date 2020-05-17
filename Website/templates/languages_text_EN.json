@@ -1,0 +1,120 @@
+{
+  "centered_img_button_left": "Get to know me",
+  "centered_img_button_right": "Resume",
+  "navbar_link1": "Home",
+  "navbar_link2": "About me",
+  "navbar_link3": "Projects",
+  "navbar_link4": "Contact",
+  "aboutme_header": "About me",
+  "aboutme_typewriter_title": "Hello, my name is Kaedin Schouten",
+  "aboutme_typewriter_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus. Quisque efficitur dui et urna sagittis pharetra. In suscipit nisl semper venenatis mattis. Pellentesque mollis non eros ac facilisis. Ut consequat gravida dui a volutpat. Praesent facilisis vulputate pellentesque. Suspendisse mollis diam quis justo sagittis ultricies. Vestibulum interdum finibus elit eget cursus. Nam varius vehicula lorem, ac semper sapien dapibus at. Aliquam erat volutpat. Cras eleifend aliquet magna quis pretium. Pellentesque sit amet est nec metus euismod molestie sit amet ac nulla. Aenean eu tristique mi, ut porttitor tellus. Pellentesque odio justo, fermentum et neque in, congue dictum purus. Donec eu convallis enim, eu Change the height of this box after the right description is added",
+  "projects_header": "Projects",
+  "tiles": [
+    {
+      "project": "Mobile App",
+      "img": "admin/img/ic-roommanager.png",
+      "softwares": [
+        "Android",
+        "XML",
+        "Java | Kotlin"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.",
+      "buttons": [
+        {
+          "imgPath": "admin/img/ic-globe.png",
+          "buttonUrl": "https://reflex.nl"
+        }
+      ]
+    },
+    {
+      "project": "Website",
+      "img": "admin/img/ic-recipebook.png",
+      "softwares": [
+        "Django",
+        "Python",
+        "Google Firebase"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.",
+      "buttons": [
+        {
+          "imgPath": "admin/img/ic-code.png",
+          "buttonUrl": "https://github.com/Kaediin/Recipebook"
+        },
+        {
+          "imgPath": "admin/img/ic-globe.png",
+          "buttonUrl": "http://kaediin.pythonanywhere.com"
+        }
+      ]
+    },
+    {
+      "project": "Mobile App",
+      "img": "admin/img/ic-scavengerhunt.png",
+      "softwares": [
+        "Android",
+        "XML",
+        "Java | Kotlin",
+        "Google Firebase"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.",
+      "buttons": [
+        {
+          "imgPath": "admin/img/ic-code.png",
+          "buttonUrl": "https://github.com/Kaediin/ScavengerHunt"
+        },
+        {
+          "imgPath": "admin/img/ic-playstore.png",
+          "buttonUrl": "https://comingsoon.com"
+        }
+      ]
+    },
+    {
+      "project": "Mobile App",
+      "img": "admin/img/ic-spacex.png",
+      "softwares": [
+        "Android",
+        "XML",
+        "Java | Kotlin"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.",
+      "buttons": [
+        {
+          "imgPath": "admin/img/ic-code.png",
+          "buttonUrl": "https://github.com/Kaediin/SpaceX-Kotlin"
+        },
+        {
+          "imgPath": "admin/img/ic-playstore.png",
+          "buttonUrl": "https://comingsoon.com"
+        }
+      ]
+    },
+    {
+      "project": "Mobile App",
+      "img": "admin/img/ic-mclib.png",
+      "softwares": [
+        "Android | IOS",
+        "Flutter",
+        "Dart",
+        "Google Firebase"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.",
+      "buttons": [
+        {
+          "imgPath": "admin/img/ic-code.png",
+          "buttonUrl": "https://github.com/Kaediin/flutter_mclib"
+        },
+        {
+          "imgPath": "admin/img/ic-playstore.png",
+          "buttonUrl": "https://comingsoon.com"
+        }
+      ]
+    }
+  ],
+  "contact_header": "Contact",
+  "contact_form_title": "Have a question? Send me an email!",
+  "contact_form_subject_placeholder": "Subject",
+  "contact_form_email_placeholder": "Enter your email",
+  "contact_form_message_placeholder": "Your message",
+  "contact_form_button_submit": "SEND",
+  "form_alert_sendingmail": "Your email is being sent. Please note you will also receive the email because Gmail only lets me send your email-contents to me. Thank you for contacting!",
+  "form_alert_invalidform": "Please in all the fields."
+}
