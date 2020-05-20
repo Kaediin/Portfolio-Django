@@ -127,6 +127,9 @@ def returnToPage(request, data, lang, isForm):
             'form_alert_invalidform': form_alert_invalidform
         })
 
+def toResume(request):
+    return render(request, 'resume.html', {})
+
 
 
 

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <link rel="icon" href="{% static 'admin/img/ic-launcher.ico' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+    <div id="parent-container-resume">
+        <div id="container-header" style="background-color: #1b242f;">
+            <div id="container-header-left">
+                <h1><span style="font-weight: lighter">Kaedin Schouten</span></h1>
+                <p>Software Developer</p>
+                <br><br>
+                <p><span style="font-weight: bold">Phone: </span>+31 6 12345678 </p>
+                <p><span style="font-weight: bold">Email: </span>skaedin@gmail.com</p>
+            </div>
+            <div id="container-header-right">
+                <div id="container-header-right-picture">
+                    <img src="{% static "admin/img/pf.JPG" %}" alt="Image">
+                </div>
+            </div>
+        </div>
+        <div id="content-body" style="background-color: #2f3e51; padding: 50px">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.</p>
+
+            <div id="container-content-experience">
+                <div id="container-left-content-body">
+                    <div id="content-body-experience"></div>
+                    <div class="content-body-line"></div>
+                    <div id="content-body-experience-child"></div>
+                </div>
+                <div id="container-right-content-body">
+                    <div id="content-body-main-job-text">
+                        <h2>Experience</h2>
+                    </div>
+                    <div class="content-body-main-job-child">
+                        <div class="container-body-job-time">
+                            <p>01 2020 - Present</p>
+                        </div>
+                        <div class="container-body-job-time-description">
+                            <p>Full-time Software developer at Eelloo</p>
+{#                            <p style="font-size: smaller">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem</p>#}
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+                <div>
+                    <div class="content-body-main-job-child" style="margin-top: 20px">
+                        <div class="container-body-job-time">
+                            <p>05 2019 - 10 2019</p>
+                        </div>
+                        <div class="container-body-job-time-description">
+                            <p>Internship Software developer at Eelloo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ending-line-left">
+
+                </div>
+                <div class="ending-line-right">
+
+                </div>
+            </div>
+            <div id="container-content-experience">
+                <div id="container-left-content-body">
+                    <div id="content-body-experience"></div>
+                    <div class="content-body-line"></div>
+                    {#                    <div id="content-body-experience-child"></div>#}
+                </div>
+                <div id="container-right-content-body">
+                    <div id="content-body-main-job-text">
+                        <h2>Education</h2>
+                    </div>
+                    <div class="content-body-main-job-child">
+                        <div class="container-body-job-time">
+                            <p>09 2018 - 12 2019</p>
+                        </div>
+                        <div class="container-body-job-time-description">
+                            <p>Software Development MBO 4</p>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+                <div>
+                    <div class="content-body-main-job-child" style="margin-top: 20px">
+                        <div class="container-body-job-time">
+                            <p>09 2014 - 06 2018</p>
+                        </div>
+                        <div class="container-body-job-time-description">
+                            <p>MAVO Helen Parkhurst daltonschool</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ending-line-left"></div>
+                <div class="ending-line-right"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Quicksand', sans-serif;
+        color: white;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+        background-color: #415871;
+    }
+
+    {# BODY START #}
+
+    {# BODY LINES START #}
+    .ending-line-left, .ending-line-right {
+        position: relative;
+    }
+
+
+    .ending-line-left:after {
+        content: '';
+        position: absolute;
+        border-bottom: 2px white solid;
+        height: 19px;
+        width: 100%;
+        transform: translateX(50%);
+    }
+
+    .ending-line-right:after {
+        content: '';
+        position: absolute;
+        border-bottom: 2px white solid;
+        height: 19px;
+        width: 100%;
+    {#transform: translateX(50%);#}
+    }
+
+
+    .content-body-main-job-child {
+        display: grid;
+        grid: "container-body-job-time container-body-job-time-description" 1fr/
+        175px 1fr
+    }
+
+    #content-body-experience {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    #content-body-experience-child {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        margin-top: 10px;
+    }
+
+    .content-body-line {
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+
+    .content-body-line:after {
+        content: '';
+        position: absolute;
+        border-right: 2px white solid;
+        height: 120px;
+        width: 30px;
+        transform: translateX(-50%);
+    }
+
+    {# BODY LINES END #}
+
+
+    #content-body {
+        height: 1000px;
+        padding: 20px;
+    }
+
+    #container-content-experience {
+        margin-top: 50px;
+        display: grid;
+        grid: "container-left-content-body container-right-content-body" 1fr/
+        1fr 10fr
+    }
+
+    #container-left-content-body {
+        display: flex;
+    {#justify-content: center;#}
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    #content-body-main-job-text {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    {# BODY END #}
+
+    {# HEADER START #}
+    #wrapper {
+        width: 65%;
+        margin: auto;
+    }
+
+    #container-header {
+        padding: 20px 20px 20px 50px;
+    }
+
+    #container-header-left {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    #container-header-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    #container-header-right-picture {
+        width: 200px;
+        height: 200px;
+        border: 5px solid white;
+    }
+
+    #container-header {
+        display: grid;
+        grid: "container-header-left container-header-right" 1fr/
+        1fr 1fr;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    {# HEADER END #}
+
+
+</style>

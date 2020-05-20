@@ -33,8 +33,8 @@
                         <a id="centered-image-button-aboutme-link" href="#about-me">{{ centered_img_button_left }}</a>
                         <img src="{% static "admin/img/right-arrow-white.png" %}" alt="" width="20" height="20">
                     </div>
-                    <div class="centered-image-button-resume nav-button-main">
-                        <a href="">{{ centered_img_button_right }}</a>
+                    <div class="centered-image-button-resume nav-button-main" onclick="toResume();">
+                        <a id="centered-image-button-resume-link" href="{% url 'toResume' %}">{{ centered_img_button_right }}</a>
                         <img src="{% static "admin/img/right-arrow-white.png" %}" alt="" width="20" height="20">
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                         <div class="content-tile-container-button-links">
                             {% for button in tile.buttons %}
                                 <div class="content-tile-button">
-                                    <a href="{{ button.buttonUrl }}">
+                                    <a href="{{ button.buttonUrl }}" target="_blank">
                                         <img src="{% static button.imgPath %}" width="50px" height="50px">
                                     </a>
                                 </div>
@@ -166,6 +166,11 @@
 
     function getToKnowMe() {
         var button = document.getElementById('centered-image-button-aboutme-link');
+        button.click();
+    }
+
+    function toResume(){
+        var button = document.getElementById('centered-image-button-resume-link');
         button.click();
     }
 
