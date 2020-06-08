@@ -115,6 +115,6 @@
   "contact_form_email_placeholder": "Enter your email",
   "contact_form_message_placeholder": "Your message",
   "contact_form_button_submit": "SEND",
-  "form_alert_sendingmail": "Your email is being sent. Please note you will also receive the email because Gmail only lets me send your email-contents to me. Thank you for contacting!",
+  "form_alert_sendingmail": "Your email is being sent. Please note you will also receive the email because Gmail only lets me send your email-contents to me. Thank you for contacting me!",
   "form_alert_invalidform": "Please in all the fields."
 }
