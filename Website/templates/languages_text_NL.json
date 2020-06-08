@@ -42,7 +42,7 @@
         },
         {
           "imgPath": "admin/img/ic-globe.png",
-          "buttonUrl": "http://kaediin.pythonanywhere.com"
+          "buttonUrl": "https://recipebook.kaedin.nl/"
         }
       ]
     },
@@ -79,7 +79,7 @@
       "buttons": [
         {
           "imgPath": "admin/img/ic-code.png",
-          "buttonUrl": "https://github.com/Kaediin/SpaceX-Kotlin"
+          "buttonUrl": "https://github.com/Kaediin/SpaceX-API-Kotlin"
         },
         {
           "imgPath": "admin/img/ic-playstore.png",
@@ -100,7 +100,7 @@
       "buttons": [
         {
           "imgPath": "admin/img/ic-code.png",
-          "buttonUrl": "https://github.com/Kaediin/flutter_mclib"
+          "buttonUrl": "https://github.com/Kaediin/Flutter-CLib"
         },
         {
           "imgPath": "admin/img/ic-playstore.png",
