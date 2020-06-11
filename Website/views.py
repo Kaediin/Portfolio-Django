@@ -130,6 +130,9 @@ def returnToPage(request, data, lang, isForm):
 def toResume(request):
     return render(request, 'resume.html', {})
 
+def spacexPrivacy(request):
+    return render(request, 'privacy_spacex.html', {})
+
 
 
 
