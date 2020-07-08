@@ -1,12 +1,10 @@
-from django.http import HttpResponseRedirect
-from django.urls import reverse
-from django.shortcuts import render, redirect
-from django.utils.datastructures import MultiValueDictKeyError
 import json
 import os.path
-from Website.models import Tile, ButtonLink
+
 from django.core.mail import send_mail
-from django.conf import settings
+from django.shortcuts import render, redirect
+
+from Website.models import Tile, ButtonLink
 
 # Create your views here.
 

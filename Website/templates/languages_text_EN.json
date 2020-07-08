@@ -32,6 +32,23 @@
       "softwares": [
         "Django",
         "Python",
+        "Google Firebase",
+        "Javascript | jQuery"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.",
+      "buttons": [
+        {
+          "imgPath": "admin/img/ic-globe.png",
+          "buttonUrl": "http://adnanjerbi.com"
+        }
+      ]
+    },
+    {
+      "project": "Website",
+      "img": "admin/img/ic-recipebook.png",
+      "softwares": [
+        "Django",
+        "Python",
         "Google Firebase"
       ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.",

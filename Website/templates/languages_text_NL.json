@@ -32,6 +32,23 @@
       "softwares": [
         "Django",
         "Python",
+        "Google Firebase",
+        "Javascript | jQuery"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.",
+      "buttons": [
+        {
+          "imgPath": "admin/img/ic-globe.png",
+          "buttonUrl": "http://adnanjerbi.com"
+        }
+      ]
+    },
+    {
+      "project": "Website",
+      "img": "admin/img/ic-recipebook.png",
+      "softwares": [
+        "Django",
+        "Python",
         "Google Firebase"
       ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.",
@@ -110,7 +127,7 @@
     }
   ],
   "contact_header": "Contact",
-  "contact_form_title": "heeft u een vraag? Stuur mij een email!",
+  "contact_form_title": "Heeft u een vraag? Stuur mij een email!",
   "contact_form_subject_placeholder": "Onderwerp",
   "contact_form_email_placeholder": "Voer uw email in",
   "contact_form_message_placeholder": "Uw bericht",
