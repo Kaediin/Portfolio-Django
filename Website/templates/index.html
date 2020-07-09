@@ -184,7 +184,8 @@
                     {% csrf_token %}
                     <input type="text" name="contact_form_email" placeholder="{{ contact_form_email_placeholder }}"
                            required><br>
-                    <input type="text" name="contact_form_subject" placeholder="{{ contact_form_subject_placeholder }}"
+                    <input type="text" name="contact_form_subject"
+                           placeholder="{{ contact_form_subject_placeholder }}"
                            required><br>
                     <textarea name="contact_form_message" placeholder="{{ contact_form_message_placeholder }}"
                               required></textarea><br>
@@ -307,6 +308,10 @@
     html {
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
+    }
+
+    section#about-me, section#projects, section#contact {
+        min-height: 100vh;
     }
 
     input[type=submit], input[type=button], button {
@@ -792,7 +797,7 @@
             margin-right: 0;
         }
 
-        button.navbar-toggle:after{
+        button.navbar-toggle:after {
             background: red;
         }
 
@@ -834,7 +839,40 @@
         div#content-projects-container-tiles {
             width: 100%;
         }
+    }
 
+    @media screen and (min-width: 1930px) {
+
+        h2#content-about-title{
+            font-size: 70px;
+            margin-bottom: 50px;
+        }
+
+        div#content-about-description{
+            font-size: 28px;
+        }
+
+        div#container-send-email {
+            padding: 0;
+            height: 100%;
+            margin-top: 100px;
+        }
+
+        input[type=text], textarea {
+            padding: 10px;
+            width: 1000px;
+            height: 50px;
+            font-size: large;
+        }
+
+        input[type=text] {
+            margin-bottom: 2px;
+        }
+
+        textarea {
+            height: 400px;
+            resize: vertical;
+        }
 
     }
 
