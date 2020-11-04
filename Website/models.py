@@ -20,4 +20,12 @@ class ButtonLink(models.Model):
         self.imgPath = imgPath
         self.url = url
 
+class ResumeItem(models.Model):
+
+    def __init__(self, time, title, show_circle, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.time = time
+        self.title = title
+        self.show_circle = show_circle
+
 

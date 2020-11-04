@@ -3,6 +3,9 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Resume</title>
     <link rel="icon" href="{% static 'admin/img/ic-launcher.ico' %}">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
@@ -12,10 +15,10 @@
     <div id="parent-container-resume">
         <div id="container-header" style="background-color: #1b242f;">
             <div id="container-header-left">
-                <h1><span style="font-weight: lighter">Kaedin Schouten</span></h1>
-                <p>Software Developer</p>
+                <h1 class="nameTitle"><span style="font-weight: lighter">Kaedin Schouten</span></h1>
+                <p class="nameTitle">Software Developer</p>
                 <br><br>
-                <p><span style="font-weight: bold">Phone: </span>+31 6 12345678 </p>
+                <p><span style="font-weight: bold">Phone: </span>+31 6 46 44 60 75</p>
                 <p><span style="font-weight: bold">Email: </span>skaedin@gmail.com</p>
             </div>
             <div id="container-header-right">
@@ -25,87 +28,82 @@
             </div>
         </div>
         <div id="content-body" style="background-color: #2f3e51; padding: 50px">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.</p>
+            <p id="biography">{{ biography }}</p>
+
 
             <div id="container-content-experience">
-                <div id="container-left-content-body">
-                    <div id="content-body-experience"></div>
-                    <div class="content-body-line"></div>
-                    <div id="content-body-experience-child"></div>
-                </div>
-                <div id="container-right-content-body">
-                    <div id="content-body-main-job-text">
+                <div id="container-education-header">
+                    <div id="container-left-content-body">
+                        <div class="vl1"></div>
+                        <span class="circle-big"></span>
+                    </div>
+                    <div id="container-right-content-body">
                         <h2>Experience</h2>
                     </div>
-                    <div class="content-body-main-job-child">
-                        <div class="container-body-job-time">
-                            <p>01 2020 - Present</p>
-                        </div>
-                        <div class="container-body-job-time-description">
-                            <p>Full-time Software developer at Eelloo</p>
-{#                            <p style="font-size: smaller">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem</p>#}
-                        </div>
-                    </div>
                 </div>
-                <div></div>
-                <div>
-                    <div class="content-body-main-job-child" style="margin-top: 20px">
-                        <div class="container-body-job-time">
-                            <p>05 2019 - 10 2019</p>
-                        </div>
-                        <div class="container-body-job-time-description">
-                            <p>Internship Software developer at Eelloo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="ending-line-left">
 
-                </div>
-                <div class="ending-line-right">
+                <div id="container-all-educations">
+                    {% for experience in experiences %}
+                        <div class="left-side-all-educations">
+                            {% if experience.show_circle %}
+                                <span class="circle-small"></span>
+                            {% endif %}
+                        </div>
+                        <div class="right-side-all-educations">
+                            <div class="container-body-job-time">
+                                <p class="experience_education">{{ experience.time }}</p>
+                            </div>
+                            <div class="container-body-job-time-description">
+                                <p class="experience_education">{{ experience.title }}</p>
+                            </div>
 
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="container-bottom-line">
+                    <div class="bottom-line">
+                        <div class="hl"></div>
+                    </div>
                 </div>
             </div>
-            <div id="container-content-experience">
-                <div id="container-left-content-body">
-                    <div id="content-body-experience"></div>
-                    <div class="content-body-line"></div>
-                    {#                    <div id="content-body-experience-child"></div>#}
-                </div>
-                <div id="container-right-content-body">
-                    <div id="content-body-main-job-text">
+
+            <div id="container-content-education">
+                <div id="container-education-header">
+                    <div id="container-left-content-body">
+                        <div class="vl2"></div>
+                        <span class="circle-big"></span>
+                    </div>
+                    <div id="container-right-content-body">
                         <h2>Education</h2>
                     </div>
-                    <div class="content-body-main-job-child">
-                        <div class="container-body-job-time">
-                            <p>09 2018 - 12 2019</p>
+                </div>
+
+                <div id="container-all-educations">
+                    {% for education in educations %}
+                        <div class="left-side-all-educations">
+                            {% if education.show_circle %}
+                                <span class="circle-small"></span>
+                            {% endif %}
                         </div>
-                        <div class="container-body-job-time-description">
-                            <p>Software Development MBO 4</p>
+                        <div class="right-side-all-educations">
+                            <div class="container-body-job-time">
+                                <p class="experience_education">{{ education.time }}</p>
+                            </div>
+                            <div class="container-body-job-time-description">
+                                <p class="experience_education">{{ education.title }}</p>
+                            </div>
                         </div>
+                    {% endfor %}
+                </div>
+                <div id="container-bottom-line">
+                    <div class="bottom-line">
+                        <div class="hl"></div>
                     </div>
                 </div>
-                <div></div>
-                <div>
-                    <div class="content-body-main-job-child" style="margin-top: 20px">
-                        <div class="container-body-job-time">
-                            <p>09 2014 - 06 2018</p>
-                        </div>
-                        <div class="container-body-job-time-description">
-                            <p>MAVO Helen Parkhurst daltonschool</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="ending-line-left"></div>
-                <div class="ending-line-right"></div>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
 <style>
@@ -127,137 +125,209 @@
 
     {# BODY START #}
 
+    @media screen and (min-width: 701px) {
+
     {# BODY LINES START #}
-    .ending-line-left, .ending-line-right {
-        position: relative;
-    }
+        .vl1 {
+            border-left: 2px solid white;
+            position: absolute;
+            height: 162px;
+        }
+
+        .vl2 {
+            border-left: 2px solid white;
+            position: absolute;
+            height: 197px;
+        }
 
 
-    .ending-line-left:after {
-        content: '';
-        position: absolute;
-        border-bottom: 2px white solid;
-        height: 19px;
-        width: 100%;
-        transform: translateX(50%);
-    }
+        .hl {
+            border-bottom: 2px solid white;
+            width: 73%;
+            margin: auto;
+        }
 
-    .ending-line-right:after {
-        content: '';
-        position: absolute;
-        border-bottom: 2px white solid;
-        height: 19px;
-        width: 100%;
-    {#transform: translateX(50%);#}
-    }
+        .container-body-job-time {
+            width: 200px;
+        }
+
+        .right-side-all-educations, #container-right-content-body {
+            display: flex;
+            align-items: center;
+        }
+
+        .left-side-all-educations, .right-side-all-educations {
+            padding-bottom: 15px;
+        }
+
+        #container-all-educations {
+            width: 80%;
+            margin: 50px auto auto;
+            display: grid;
+            grid: "left-side-all-educations right-side-all-educations"1fr/
+        1fr 10fr;
+        }
 
 
-    .content-body-main-job-child {
-        display: grid;
-        grid: "container-body-job-time container-body-job-time-description" 1fr/
-        175px 1fr
-    }
+        #container-education-header {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid: "container-left-content-body container-right-content-body"1fr/
+        1fr 10fr;
+        }
 
-    #content-body-experience {
-        width: 30px;
-        height: 30px;
-        background-color: white;
-        border-radius: 50%;
-    }
+        #container-left-content-body {
+            display: flex;
+            justify-content: center;
+        }
 
-    #content-body-experience-child {
-        width: 20px;
-        height: 20px;
-        background-color: white;
-        border-radius: 50%;
-        margin-top: 10px;
-    }
+        .left-side-all-educations {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .content-body-line {
-        width: 30px;
-        height: 30px;
-        position: relative;
-    }
+        .circle-small {
+            height: 20px;
+            width: 20px;
+            background-color: #ffffff;
+            border-radius: 50%;
+        }
 
-    .content-body-line:after {
-        content: '';
-        position: absolute;
-        border-right: 2px white solid;
-        height: 120px;
-        width: 30px;
-        transform: translateX(-50%);
-    }
+        .circle-big {
+            height: 40px;
+            width: 40px;
+            background-color: #ffffff;
+            border-radius: 50%;
+        }
 
     {# BODY LINES END #}
 
 
-    #content-body {
-        height: 1000px;
-        padding: 20px;
-    }
+        #container-content-experience, #container-content-education, #container-content-skills {
+            margin-top: 50px;
+        }
 
-    #container-content-experience {
-        margin-top: 50px;
-        display: grid;
-        grid: "container-left-content-body container-right-content-body" 1fr/
-        1fr 10fr
-    }
-
-    #container-left-content-body {
-        display: flex;
-    {#justify-content: center;#}
-        align-items: center;
-        flex-direction: column;
-
-    }
-
-    #content-body-main-job-text {
-        height: 30px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 40px;
-    }
+        #content-body {
+            height: 1000px;
+            padding: 20px;
+        }
 
     {# BODY END #}
 
     {# HEADER START #}
-    #wrapper {
-        width: 65%;
-        margin: auto;
-    }
+        #wrapper {
+            width: 65%;
+            margin: auto;
+        }
 
-    #container-header {
-        padding: 20px 20px 20px 50px;
-    }
+        #container-header {
+            padding: 20px 20px 20px 50px;
+        }
 
-    #container-header-left {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-    }
+        #container-header-left {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+        }
 
-    #container-header-right {
-        display: flex;
-        justify-content: center;
-    }
+        #container-header-right {
+            display: flex;
+            justify-content: center;
+        }
 
-    #container-header-right-picture {
-        width: 200px;
-        height: 200px;
-        border: 5px solid white;
-    }
+        #container-header-right-picture {
+            width: 200px;
+            height: 200px;
+            border: 5px solid white;
+        }
 
-    #container-header {
-        display: grid;
-        grid: "container-header-left container-header-right" 1fr/
+        #container-header {
+            display: grid;
+            grid: "container-header-left container-header-right" 1fr/
         1fr 1fr;
-    }
+        }
 
-    img {
-        width: 200px;
-    }
+        img {
+            width: 200px;
+        }
 
     {# HEADER END #}
+
+    }
+
+    @media screen and (max-width: 1260px) {
+        #wrapper {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .container-body-job-time {
+            width: 150px;
+        }
+
+        .experience_education {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+
+    @media screen and (max-width: 700px) {
+
+        #container-header {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        #container-header-right-picture {
+            width: 200px;
+            height: 200px;
+            border: 5px solid white;
+            margin: 50px 0 50px 0;
+        }
+
+        #container-header-left {
+            padding-bottom: 50px;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        #biography {
+            text-align: center;
+        }
+
+        #container-content-experience {
+            padding: 50px 0 50px 0;
+        }
+
+        #container-right-content-body {
+            text-align: center;
+            border-bottom: solid white 2px;
+            margin-bottom: 20px;
+        }
+
+        .container-body-job-time {
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .right-side-all-educations {
+            margin: 20px 0 20px 0;
+            text-align: center;
+        }
+
+        .nameTitle {
+            text-align: center;
+        }
+
+    }
 
 
 </style>

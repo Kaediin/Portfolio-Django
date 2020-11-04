@@ -1,0 +1,54 @@
+{
+  "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt magna non ex mattis cursus.",
+  "experiences": [
+    {
+      "time": "01 2020 - Present",
+      "title": "Full-time Software developer at Eelloo",
+      "show_circle": true
+    },
+    {
+      "time": "05 2019 - 10 2019",
+      "title": "Internship Software developer at Eelloo",
+      "show_circle": false
+    }
+  ],
+  "educations": [
+    {
+      "time": "09 2020 - Present",
+      "title": "Artificial Intelligence at Hogeschool Utrecht",
+      "show_circle": true
+    },
+    {
+      "time": "09 2018 - 12 2019",
+      "title": "Software Development MBO 4",
+      "show_circle": false
+    },
+    {
+      "time": "09 2014 - 06 2018",
+      "title": "MAVO Helen Parkhurst daltonschool",
+      "show_circle": false
+    }
+  ],
+  "skills": [
+    {
+      "time": "",
+      "title": "Skill 1",
+      "show_circle": true
+    },
+    {
+      "time": "",
+      "title": "Skill 2",
+      "show_circle": true
+    },
+    {
+      "time": "",
+      "title": "Skill 3",
+      "show_circle": true
+    },
+    {
+      "time": "",
+      "title": "Skill 4",
+      "show_circle": true
+    }
+  ]
+}

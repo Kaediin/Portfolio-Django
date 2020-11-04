@@ -4,7 +4,7 @@ import os.path
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 
-from Website.models import Tile, ButtonLink
+from Website.models import Tile, ButtonLink, ResumeItem
 
 # Create your views here.
 
@@ -126,7 +126,39 @@ def returnToPage(request, data, lang, isForm):
         })
 
 def toResume(request):
-    return render(request, 'resume.html', {})
+    json_data = open(os.path.join(BASE, "templates/resume_text.json"))
+    data = getJson(json_data)
+
+    biography = data['biography']
+    experiences = fillListsResumeItems(data, 'experiences')
+    educations = fillListsResumeItems(data, 'educations')
+    skills = fillListsResumeItems(data, 'skills')
+
+
+    return render(request, 'resume.html', {
+        'biography': biography,
+        'experiences': experiences,
+        'educations': educations,
+        'skills': skills,
+    })
+
+def fillListsResumeItems(data, listKeyword):
+
+    list = []
+
+    for jsonItem in data[listKeyword]:
+        time = str(jsonItem['time'])
+        title = str(jsonItem['title'])
+        show_circle = bool(jsonItem['show_circle'])
+
+        resumeItem = ResumeItem(
+            time,
+            title,
+            show_circle
+        )
+
+        list.append(resumeItem)
+    return list
 
 def spacexPrivacy(request):
     return render(request, 'privacy_spacex.html', {})
